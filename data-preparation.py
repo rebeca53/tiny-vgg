@@ -220,4 +220,33 @@ def renameAllVal():
    renameValImages('val_images', 250, val_dict)
    write_val_dict(val_dict)
 
-renameAllVal()
+# renameAllVal()
+
+def renameMapImages():
+    map_dict = {}
+    dirName = 'map_images'
+    # renameValImages('map_images', 500, map_dict)
+
+    prev_cwd = Path.cwd()
+    path = Path.cwd() / 'data' / 'class_10_val' / dirName  # The path to use
+
+    # allimg = list(path.glob('*.JPEG'))  # Getting all the img files
+    allimg = list(path.glob('*.jpg'))  # Getting all the img files
+
+    os.chdir(path)  # Changing the cwd to the path
+    random.shuffle(allimg) # shuffle the list of images so they will not be sorted by class
+
+    for i, imgfile in enumerate(allimg):
+        filename = os.path.basename(imgfile)
+        # print(filename)
+        # Image2 = filename.replace("-1", "-1_s", 1)
+        to_usename = filename.replace('.jpg','.JPEG', 1)  # The name to use
+        update_val_dict(map_dict, filename, to_usename)
+        # print(to_usename)
+        imgfile.rename(to_usename)
+
+    os.chdir(prev_cwd)
+
+    write_val_dict(map_dict)
+
+renameMapImages()
