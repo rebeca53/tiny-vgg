@@ -17,9 +17,6 @@ tiny_class_dict = load(open('./data/class_dict_10.json', 'r'))
 print(tiny_class_dict)
 WIDTH = 64
 HEIGHT = 64
-EPOCHS = 1000
-PATIENCE = 50
-LR = 0.001
 NUM_CLASS = 10
 BATCH_SIZE = 32
 
@@ -53,10 +50,3 @@ for test_image in files:
     class_names = ["highway", "forest", "river", "permanent crop", "industrial", "annual crop", "sea or lake", "herbaceous", "residential", "pasture"]
     pred_label = class_names[np.argmax(np.round(img_predictions,2))]
     print(" Predicted label is :: "+ pred_label)
-
-
-    Cartographer: Rebeca Nunes
-Date: 01/08/24
-Class: Data to Knowledge
-Professor Little
-University of Muenster
