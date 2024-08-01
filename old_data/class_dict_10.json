@@ -1,0 +1,42 @@
+{
+  "n03662601": {
+    "class": "lifeboat",
+    "index": 0
+  },
+  "n02165456": {
+    "class": "ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle",
+    "index": 1
+  },
+  "n07873807": {
+    "class": "pizza, pizza pie",
+    "index": 2
+  },
+  "n07720875": {
+    "class": "bell pepper",
+    "index": 3
+  },
+  "n04146614": {
+    "class": "school bus",
+    "index": 4
+  },
+  "n01882714": {
+    "class": "koala, koala bear, kangaroo bear, native bear, Phascolarctos cinereus",
+    "index": 5
+  },
+  "n07920052": {
+    "class": "espresso",
+    "index": 6
+  },
+  "n02509815": {
+    "class": "lesser panda, red panda, panda, bear cat, cat bear, Ailurus fulgens",
+    "index": 7
+  },
+  "n07747607": {
+    "class": "orange",
+    "index": 8
+  },
+  "n04285008": {
+    "class": "sports car, sport car",
+    "index": 9
+  }
+}
