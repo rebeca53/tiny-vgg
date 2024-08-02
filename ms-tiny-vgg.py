@@ -10,6 +10,8 @@ from tensorflow.keras.layers import Dense, Flatten, Conv2D, MaxPool2D,\
 from tensorflow.keras import Model, Sequential
 from os.path import basename
 from time import time
+import tifffile
+import matplotlib.pyplot as plt
 
 print(tf.__version__)
 
@@ -83,9 +85,10 @@ def process_path_train(path):
     """
 
     # Get the class
+    print(path)
     path = path.numpy()
     image_name = basename(path.decode('ascii'))
-    label_name = re.sub(r'(.+)_\d+\.JPEG', r'\1', image_name)
+    label_name = re.sub(r'(.+)_\d+\.tif', r'\1', image_name)
     label_index = tiny_class_dict[label_name]['index']
 
     # Convert label to one-hot encoding
@@ -93,13 +96,17 @@ def process_path_train(path):
     label = tf.reshape(label, [NUM_CLASS])
 
     # Read image and convert the image to [0, 1] range 3d tensor
-    img = tf.io.read_file(path)
-    img = tf.image.decode_jpeg(img, channels=3)
+    img = tifffile.imread(path.decode('ascii'))
+    img = img[:, :, [3, 2, 1]] # change order to have RGB
+    img = img.astype('uint8')
+    fig = plt.figure()
+    plt.imshow(img)
+    plt.show()
     img = tf.image.convert_image_dtype(img, tf.float32)
     img = tf.image.resize(img, [WIDTH, HEIGHT])
-
+    print(img)
+    print(label)
     return(img, label)
-
 
 def process_path_test(path):
     """
@@ -118,6 +125,7 @@ def process_path_test(path):
     """
 
     # Get the class
+    print(path)
     path = path.numpy()
     image_name = basename(path.decode('ascii'))
     label_index = tiny_val_class_dict[image_name]['index']
@@ -127,11 +135,13 @@ def process_path_test(path):
     label = tf.reshape(label, [NUM_CLASS])
 
     # Read image and convert the image to [0, 1] range 3d tensor
-    img = tf.io.read_file(path)
-    img = tf.image.decode_jpeg(img, channels=3)
+    img = tifffile.imread(path.decode('ascii'))
+    img = img[:, :, [3, 2, 1]] # change order to have RGB
+    img = img.astype('uint8')
     img = tf.image.convert_image_dtype(img, tf.float32)
     img = tf.image.resize(img, [WIDTH, HEIGHT])
-
+    print(img)
+    print(label)
     return(img, label)
 
 
@@ -258,12 +268,12 @@ NUM_CLASS = 10
 BATCH_SIZE = 32
 
 # Create training and validation dataset
-tiny_class_dict = load(open('./data/class_dict_10.json', 'r'))
-tiny_val_class_dict = load(open('./data/val_class_dict_10.json', 'r'))
+tiny_class_dict = load(open('./ms-data/class_dict_10.json', 'r'))
+tiny_val_class_dict = load(open('./ms-data/val_class_dict_10.json', 'r'))
 
-training_images = './data/class_10_train/*/images/*.JPEG'
-vali_images = './data/class_10_val/val_images/*.JPEG'
-test_images = './data/class_10_val/test_images/*.JPEG'
+training_images = './ms-data/class_10_train/*/images/*.tif'
+vali_images = './ms-data/class_10_val/val_images/*.tif'
+test_images = './ms-data/class_10_val/test_images/*.tif'
 
 # Create training dataset
 train_path_dataset = tf.data.Dataset.list_files(training_images)
@@ -327,10 +337,12 @@ tiny_vgg = Sequential([
     Dense(NUM_CLASS, activation='softmax', name='output')
 ])
 
+print("COMMMPIIIIIILEEE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 # "Compile" the model with loss function and optimizer
 loss_object = tf.keras.losses.CategoricalCrossentropy()
 # optimizer = tf.keras.optimizers.Adam(learning_rate=LR)
 optimizer = tf.keras.optimizers.SGD(learning_rate=LR)
+print("COMMMPIIIIIILEEEDDDDDDDDDDDDDD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 
 train_mean_loss = tf.keras.metrics.Mean(name='train_mean_loss')
 train_accuracy = tf.keras.metrics.CategoricalAccuracy(name='train_accuracy')

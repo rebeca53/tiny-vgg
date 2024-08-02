@@ -11,9 +11,10 @@ from tensorflow.keras import Model, Sequential
 import os
 from os.path import basename
 from time import time
+import tifffile
 
 print(tf.__version__)
-tiny_class_dict = load(open('./data/class_dict_10.json', 'r'))
+tiny_class_dict = load(open('./ms-data/class_dict_10.json', 'r'))
 print(tiny_class_dict)
 WIDTH = 64
 HEIGHT = 64
@@ -25,9 +26,9 @@ loss_object = tf.keras.losses.CategoricalCrossentropy()
 
 tiny_vgg = tf.keras.models.load_model('trained_vgg_best.h5')
 
-tiny_val_class_dict = load(open('./data/val_class_dict_10.json', 'r'))
+tiny_val_class_dict = load(open('./ms-data/val_class_dict_10.json', 'r'))
 
-test_images = './data/class_10_val/map_images/*.JPEG'
+test_images = './ms-data/class_10_val/map_images/*.tif'
 
 import glob
 files = glob.glob(test_images)
@@ -38,8 +39,8 @@ for test_image in files:
     # test_image = './data/class_10_val/map_images/Forest_1465.JPEG'
 
     # Read image and convert the image to [0, 1] range 3d tensor
-    img = tf.io.read_file(test_image)
-    img = tf.image.decode_jpeg(img, channels=3)
+    img = tifffile.imread(test_image)
+    img = img[:, :, [3, 2, 1]] # change order to have RGB
     img = tf.image.convert_image_dtype(img, tf.float32)
     img = tf.image.resize(img, [WIDTH, HEIGHT])
 

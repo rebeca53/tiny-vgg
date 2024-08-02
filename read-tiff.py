@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 tiny_vgg = tf.keras.models.load_model('trained_vgg_best.h5')
 WIDTH = 64
 HEIGHT = 64
-test_image = './Forest_1465.tif'
+test_image = './ms-data/class_10_val/map_images/Forest_1465.tif'
 
 # attempt with tensorflow.io
 # img loaded has all pixels equal to 4
@@ -25,11 +25,12 @@ test_image = './Forest_1465.tif'
 # attempt with tifffile -- IN PROGRESS
 # it imports all channels, but it display nothing!
 import tifffile
-img = tifffile.imread(test_image, key=0) # use the key=0
+img = tifffile.imread(test_image) # use the key=0
 print(img.shape)
 print(img.dtype)
 # img = img[:,:,1:4] # get B02, B03, B04 - BGR
 img = img[:, :, [3, 2, 1]] # change order to have RGB
+img = img.astype('uint8')
 
 # attempt with rasterio -- IN PROGRESS
 # I can't install it!
@@ -38,7 +39,7 @@ img = img[:, :, [3, 2, 1]] # change order to have RGB
 
 fig = plt.figure()
 fig.add_subplot(1,2,1)
-plt.imshow(img.astype('uint8'))
+plt.imshow(img)
 
 img = tf.image.convert_image_dtype(img, tf.float32)
 img = tf.image.resize(img, [WIDTH, HEIGHT])
@@ -83,4 +84,38 @@ print(" Predicted label is :: "+ pred_label)
 
 
 
+training_images = './ms-data/class_10_train/*/images/*.tif'
 
+import glob
+from os.path import basename
+import re
+from json import load, dump
+
+files = glob.glob(training_images)
+print(files)
+NUM_CLASS = 10
+tiny_class_dict = load(open('./ms-data/class_dict_10.json', 'r'))
+
+for path in files:
+    path = './ms-data/class_10_train/n01882714/images/n01882714_0.tif'
+    print(path)
+
+    # path = path.numpy()
+    # image_name = basename(path)
+    # label_name = re.sub(r'(.+)_\d+\.tif', r'\1', image_name)
+    # label_index = tiny_class_dict[label_name]['index']
+
+    # # Convert label to one-hot encoding
+    # label = tf.one_hot(indices=[label_index], depth=NUM_CLASS)
+    # label = tf.reshape(label, [NUM_CLASS])
+
+    # Read image and convert the image to [0, 1] range 3d tensor
+    img = tifffile.imread(path)
+    print(img.shape)
+    img = img[:, :, [3, 2, 1]] # change order to have RGB
+    img = img.astype('uint8')
+    fig = plt.figure()
+    plt.imshow(img)
+    plt.show()
+    img = tf.image.convert_image_dtype(img, tf.float32)
+    img = tf.image.resize(img, [WIDTH, HEIGHT])
