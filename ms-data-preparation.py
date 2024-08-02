@@ -5,7 +5,7 @@ import json
 import shutil
 
 # n01882714, n02165456, n02509815, n03662601, n04146614, n04285008, n07720875, n07747607, n07873807, n07920052
-# path = Path.cwd() / 'data' / 'class_10_train' / 'n07920052' / 'images'  # The path to use
+# path = Path.cwd() / 'ms-data' / 'class_10_train' / 'n07920052' / 'images'  # The path to use
 # to_usenum = 0  # Start num
 # allimg = list(path.glob('*.jpg'))  # Getting all the img files
 # chdir(path)  # Changing the cwd to the path
@@ -21,18 +21,18 @@ def renameAllTrain():
 
 def renameTrainImages(className):
     prev = Path.cwd()
-    path = Path.cwd() / 'data' / 'class_10_train' / className / 'images'  # The path to use
+    path = Path.cwd() / 'ms-data' / 'class_10_train' / className / 'images'  # The path to use
     to_usenum = 0  # Start num
-    allimg = list(path.glob('*.jpg'))  # Getting all the img files
+    allimg = list(path.glob('*.tif'))  # Getting all the img files
     os.chdir(path)  # Changing the cwd to the path
 
     for i, imgfile in enumerate(allimg):
-        to_usename = f"{className}_{to_usenum+i}.JPEG"  # The name to use
+        to_usename = f"{className}_{to_usenum+i}.tif"  # The name to use
         imgfile.rename(to_usename) 
 
     os.chdir(prev)
 
-# renameAllTrain()
+#renameAllTrain()
 
 
 # # Preparing validation and test images
@@ -55,10 +55,10 @@ def renameTrainImages(className):
 
 def renameValImages(dirName, startNumber, val_dict):
     prev_cwd = Path.cwd()
-    path = Path.cwd() / 'data' / 'class_10_val' / dirName  # The path to use
+    path = Path.cwd() / 'ms-data' / 'class_10_val' / dirName  # The path to use
     to_usenum = startNumber  # Start num
     # allimg = list(path.glob('*.JPEG'))  # Getting all the img files
-    allimg = list(path.glob('*.jpg'))  # Getting all the img files
+    allimg = list(path.glob('*.tif'))  # Getting all the img files
 
     os.chdir(path)  # Changing the cwd to the path
     random.shuffle(allimg) # shuffle the list of images so they will not be sorted by class
@@ -66,7 +66,7 @@ def renameValImages(dirName, startNumber, val_dict):
     for i, imgfile in enumerate(allimg):
         filename = os.path.basename(imgfile)
         # print(filename)
-        to_usename = f"val_{to_usenum}.JPEG"  # The name to use
+        to_usename = f"val_{to_usenum}.tif"  # The name to use
         update_val_dict(val_dict, filename, to_usename)
         # print(to_usename)
         imgfile.rename(to_usename)
@@ -220,7 +220,7 @@ def renameAllVal():
    renameValImages('val_images', 250, val_dict)
    write_val_dict(val_dict)
 
-# renameAllVal()
+renameAllVal()
 
 def renameMapImages():
     map_dict = {}
@@ -228,10 +228,10 @@ def renameMapImages():
     # renameValImages('map_images', 500, map_dict)
 
     prev_cwd = Path.cwd()
-    path = Path.cwd() / 'data' / 'class_10_val' / dirName  # The path to use
+    path = Path.cwd() / 'ms-data' / 'class_10_val' / dirName  # The path to use
 
     # allimg = list(path.glob('*.JPEG'))  # Getting all the img files
-    allimg = list(path.glob('*.jpg'))  # Getting all the img files
+    allimg = list(path.glob('*.tif'))  # Getting all the img files
 
     os.chdir(path)  # Changing the cwd to the path
     random.shuffle(allimg) # shuffle the list of images so they will not be sorted by class
@@ -240,13 +240,13 @@ def renameMapImages():
         filename = os.path.basename(imgfile)
         # print(filename)
         # Image2 = filename.replace("-1", "-1_s", 1)
-        to_usename = filename.replace('.jpg','.JPEG', 1)  # The name to use
+        to_usename = filename # filename.replace('.tif','.JPEG', 1)  # The name to use
         update_val_dict(map_dict, filename, to_usename)
         # print(to_usename)
-        imgfile.rename(to_usename)
+        # imgfile.rename(to_usename)
 
     os.chdir(prev_cwd)
 
     write_val_dict(map_dict)
 
-renameMapImages()
+# renameMapImages()
