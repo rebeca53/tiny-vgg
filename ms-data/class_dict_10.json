@@ -1,0 +1,42 @@
+{
+  "n03662601": {
+    "class": "highway",
+    "index": 0
+  },
+  "n02165456": {
+    "class": "forest",
+    "index": 1
+  },
+  "n07873807": {
+    "class": "river",
+    "index": 2
+  },
+  "n07720875": {
+    "class": "permanent crop",
+    "index": 3
+  },
+  "n04146614": {
+    "class": "industrial",
+    "index": 4
+  },
+  "n01882714": {
+    "class": "annual crop",
+    "index": 5
+  },
+  "n07920052": {
+    "class": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "n02509815": {
+    "class": "herbaceous vegetation",
+    "index": 7
+  },
+  "n07747607": {
+    "class": "residential",
+    "index": 8
+  },
+  "n04285008": {
+    "class": "pasture",
+    "index": 9
+  }
+}
