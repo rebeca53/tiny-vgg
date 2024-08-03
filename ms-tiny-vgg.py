@@ -70,7 +70,6 @@ def split_val_data():
             copyfile(val_images[i], val_images[i].replace('images',
                                                           'test_images'))
 
-
 def process_path_train(path):
     """
     Get the (class label, processed image) pair of the given image path. This
@@ -86,7 +85,6 @@ def process_path_train(path):
     """
 
     # Get the class
-    print(path)
     path = path.numpy()
     image_name = basename(path.decode('ascii'))
     label_name = re.sub(r'(.+)_\d+\.tif', r'\1', image_name)
@@ -100,13 +98,8 @@ def process_path_train(path):
     img = tifffile.imread(path.decode('ascii'))
     img = img[:, :, [3, 2, 1]] # change order to have RGB
     img = exposure.equalize_hist(img)
-    # fig = plt.figure()
-    # plt.imshow(img)
-    # plt.show()
     img = tf.image.convert_image_dtype(img, tf.float32)
     img = tf.image.resize(img, [WIDTH, HEIGHT])
-    # print(img)
-    # print(label)
     return(img, label)
 
 def process_path_test(path):
@@ -126,7 +119,6 @@ def process_path_test(path):
     """
 
     # Get the class
-    print(path)
     path = path.numpy()
     image_name = basename(path.decode('ascii'))
     label_index = tiny_val_class_dict[image_name]['index']
@@ -141,8 +133,7 @@ def process_path_test(path):
     img = exposure.equalize_hist(img)
     img = tf.image.convert_image_dtype(img, tf.float32)
     img = tf.image.resize(img, [WIDTH, HEIGHT])
-    # print(img)
-    # print(label)
+
     return(img, label)
 
 
