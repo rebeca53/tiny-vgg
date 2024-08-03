@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 tiny_vgg = tf.keras.models.load_model('trained_vgg_best.h5')
 WIDTH = 64
 HEIGHT = 64
-test_image = './ms-data/class_10_val/map_images/Forest_1465.tif'
+test_image = './ms-data/class_10_val/map_images/Industrial_473.tif'
 
 # attempt with tensorflow.io
 # img loaded has all pixels equal to 4
@@ -38,7 +38,7 @@ img = img.astype('uint8')
 # img = rasterio.open(test_image)
 
 fig = plt.figure()
-fig.add_subplot(1,2,1)
+fig.add_subplot(1,3,1)
 plt.imshow(img)
 
 img = tf.image.convert_image_dtype(img, tf.float32)
@@ -55,11 +55,11 @@ print(img.shape)
 print(img.dtype)
 
 
-img = tf.io.read_file('./data/class_10_val/map_images/Forest_1465.JPEG')
+img = tf.io.read_file('./data/class_10_val/map_images/Industrial_473.JPEG')
 # print(img)
 img = tf.image.decode_jpeg(img, channels=3)
 
-fig.add_subplot(1,2,2)
+fig.add_subplot(1,3,2)
 plt.imshow(img)
 plt.show()
 
@@ -81,15 +81,16 @@ pred_label = class_names[np.argmax(np.round(img_predictions,2))]
 print(" Predicted label is :: "+ pred_label)
 
 
-
-
-
 training_images = './ms-data/class_10_train/*/images/*.tif'
 
 import glob
 from os.path import basename
 import re
 from json import load, dump
+from skimage import exposure, img_as_ubyte
+def normalize(image):
+        image = (image - image.min()) / (image.max() - image.min())
+        return image
 
 files = glob.glob(training_images)
 print(files)
@@ -97,7 +98,7 @@ NUM_CLASS = 10
 tiny_class_dict = load(open('./ms-data/class_dict_10.json', 'r'))
 
 for path in files:
-    path = './ms-data/class_10_train/n01882714/images/n01882714_0.tif'
+# path = './ms-data/class_10_train/n01882714/images/AnnualCrop_1.tif'
     print(path)
 
     # path = path.numpy()
@@ -108,14 +109,24 @@ for path in files:
     # # Convert label to one-hot encoding
     # label = tf.one_hot(indices=[label_index], depth=NUM_CLASS)
     # label = tf.reshape(label, [NUM_CLASS])
+    
+
 
     # Read image and convert the image to [0, 1] range 3d tensor
-    img = tifffile.imread(path)
+    img = tifffile.imread(test_image)
     print(img.shape)
+    print(img.dtype)
     img = img[:, :, [3, 2, 1]] # change order to have RGB
-    img = img.astype('uint8')
+    img =  exposure.equalize_hist(img)
+    # img = img.astype('uint8')
+    print(img.dtype)
+
     fig = plt.figure()
+
+    # fig.add_subplot(1,3,3)
     plt.imshow(img)
     plt.show()
+
     img = tf.image.convert_image_dtype(img, tf.float32)
     img = tf.image.resize(img, [WIDTH, HEIGHT])
+

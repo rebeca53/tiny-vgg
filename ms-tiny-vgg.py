@@ -12,6 +12,7 @@ from os.path import basename
 from time import time
 import tifffile
 import matplotlib.pyplot as plt
+from skimage import exposure
 
 print(tf.__version__)
 
@@ -98,14 +99,14 @@ def process_path_train(path):
     # Read image and convert the image to [0, 1] range 3d tensor
     img = tifffile.imread(path.decode('ascii'))
     img = img[:, :, [3, 2, 1]] # change order to have RGB
-    img = img.astype('uint8')
-    fig = plt.figure()
-    plt.imshow(img)
-    plt.show()
+    img = exposure.equalize_hist(img)
+    # fig = plt.figure()
+    # plt.imshow(img)
+    # plt.show()
     img = tf.image.convert_image_dtype(img, tf.float32)
     img = tf.image.resize(img, [WIDTH, HEIGHT])
-    print(img)
-    print(label)
+    # print(img)
+    # print(label)
     return(img, label)
 
 def process_path_test(path):
@@ -137,11 +138,11 @@ def process_path_test(path):
     # Read image and convert the image to [0, 1] range 3d tensor
     img = tifffile.imread(path.decode('ascii'))
     img = img[:, :, [3, 2, 1]] # change order to have RGB
-    img = img.astype('uint8')
+    img = exposure.equalize_hist(img)
     img = tf.image.convert_image_dtype(img, tf.float32)
     img = tf.image.resize(img, [WIDTH, HEIGHT])
-    print(img)
-    print(label)
+    # print(img)
+    # print(label)
     return(img, label)
 
 

@@ -65,10 +65,10 @@ def renameValImages(dirName, startNumber, val_dict):
 
     for i, imgfile in enumerate(allimg):
         filename = os.path.basename(imgfile)
-        # print(filename)
+        print(filename)
         to_usename = f"val_{to_usenum}.tif"  # The name to use
+        print(to_usename)
         update_val_dict(val_dict, filename, to_usename)
-        # print(to_usename)
         imgfile.rename(to_usename)
         to_usenum += 1
 
@@ -139,70 +139,6 @@ def createDictEntry(fileName):
         }
     else:
         print("Failed to create dict entry. Invalid preffix in the file name.")
-
-    # match preffix:
-    #     case 'AnnualCrop':
-    #         return  {
-    #             "class": "n01882714",
-    #             "description": "annual crop",
-    #             "index": 5
-    #         }
-    #     case 'Forest':
-    #         return {
-    #             "class": "n02165456",
-    #             "description": "forest",
-    #             "index": 1
-    #         }
-    #     case 'HerbaceousVegetation':
-    #         return {
-    #             "class": "n02509815",
-    #             "description": "herbaceous vegetation",
-    #             "index": 7
-    #         }
-    #     case 'Highway':
-    #         return {
-    #             "class": "n03662601",
-    #             "description": "highway",
-    #             "index": 0
-    #         }
-    #     case 'Industrial':
-    #         return {
-    #             "class": "n04146614",
-    #             "description": "industrial",
-    #             "index": 4
-    #         }
-    #     case 'Pasture':
-    #         return {
-    #             "class": "n04285008",
-    #             "description": "pasture",
-    #             "index": 9
-    #         }
-    #     case 'PermanentCrop':
-    #         return {
-    #             "class": "n07720875",
-    #             "description": "permanent crop",
-    #             "index": 3
-    #         }
-    #     case 'Residential':
-    #         return {
-    #             "class": "n07747607",
-    #             "description": "residential",
-    #             "index": 8
-    #         }
-    #     case 'River':
-    #         return {
-    #             "class": "n07873807",
-    #             "description": "river",
-    #             "index": 2
-    #         }
-    #     case 'SeaLake':
-    #         return {
-    #             "class": "n07920052",
-    #             "description": "sea, lake, sea or lake",
-    #             "index": 6
-    #         }
-    #     case _:
-    #         print("Failed to create dict entry. Invalid preffix in the file name.")
 
 def update_val_dict(dict, fileName, newname):
     # print(createDictEntry(fileName))
