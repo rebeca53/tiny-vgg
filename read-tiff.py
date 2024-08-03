@@ -101,23 +101,16 @@ for path in files:
 # path = './ms-data/class_10_train/n01882714/images/AnnualCrop_1.tif'
     print(path)
 
-    # path = path.numpy()
-    # image_name = basename(path)
-    # label_name = re.sub(r'(.+)_\d+\.tif', r'\1', image_name)
-    # label_index = tiny_class_dict[label_name]['index']
-
-    # # Convert label to one-hot encoding
-    # label = tf.one_hot(indices=[label_index], depth=NUM_CLASS)
-    # label = tf.reshape(label, [NUM_CLASS])
-    
-
-
     # Read image and convert the image to [0, 1] range 3d tensor
-    img = tifffile.imread(test_image)
+    img = tifffile.imread(path)
     print(img.shape)
     print(img.dtype)
     img = img[:, :, [3, 2, 1]] # change order to have RGB
-    img =  exposure.equalize_hist(img)
+    
+    # linear normalization
+    img = (img - np.mean(img)) / np.std(img)
+
+    # img =  exposure.equalize_hist(img)
     # img = img.astype('uint8')
     print(img.dtype)
 
@@ -130,3 +123,4 @@ for path in files:
     img = tf.image.convert_image_dtype(img, tf.float32)
     img = tf.image.resize(img, [WIDTH, HEIGHT])
 
+    exit()
