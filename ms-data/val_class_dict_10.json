@@ -1,142 +1,2502 @@
 {
-  "Forest_1465.JPEG": {
+  "val_0.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_1.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_10.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_100.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_101.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_102.tif": {
     "class": "n02165456",
     "description": "forest",
     "index": 1
   },
-  "Forest_2161.JPEG": {
+  "val_103.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_104.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_105.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_106.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_107.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_108.tif": {
     "class": "n02165456",
     "description": "forest",
     "index": 1
   },
-  "Forest_2373.JPEG": {
-    "class": "n02165456",
-    "description": "forest",
-    "index": 1
-  },
-  "Forest_2768.JPEG": {
-    "class": "n02165456",
-    "description": "forest",
-    "index": 1
-  },
-  "Forest_2802.JPEG": {
-    "class": "n02165456",
-    "description": "forest",
-    "index": 1
-  },
-  "Forest_2879.JPEG": {
-    "class": "n02165456",
-    "description": "forest",
-    "index": 1
-  },
-  "Highway_1158.JPEG": {
-    "class": "n03662601",
-    "description": "highway",
-    "index": 0
-  },
-  "Highway_1269.JPEG": {
-    "class": "n03662601",
-    "description": "highway",
-    "index": 0
-  },
-  "Highway_1647.JPEG": {
-    "class": "n03662601",
-    "description": "highway",
-    "index": 0
-  },
-  "Highway_2338.JPEG": {
-    "class": "n03662601",
-    "description": "highway",
-    "index": 0
-  },
-  "Highway_2437.JPEG": {
-    "class": "n03662601",
-    "description": "highway",
-    "index": 0
-  },
-  "Highway_345.JPEG": {
-    "class": "n03662601",
-    "description": "highway",
-    "index": 0
-  },
-  "Highway_742.JPEG": {
-    "class": "n03662601",
-    "description": "highway",
-    "index": 0
-  },
-  "Industrial_1738.JPEG": {
+  "val_109.tif": {
     "class": "n04146614",
     "description": "industrial",
     "index": 4
   },
-  "Industrial_1914.JPEG": {
+  "val_11.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_110.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_111.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_112.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_113.tif": {
     "class": "n04146614",
     "description": "industrial",
     "index": 4
   },
-  "Industrial_473.JPEG": {
+  "val_114.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_115.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_116.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_117.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_118.tif": {
     "class": "n04146614",
     "description": "industrial",
     "index": 4
   },
-  "Industrial_587.JPEG": {
+  "val_119.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_12.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_120.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_121.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_122.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_123.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_124.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_125.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_126.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_127.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_128.tif": {
     "class": "n04146614",
     "description": "industrial",
     "index": 4
   },
-  "River_1143.JPEG": {
+  "val_129.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_13.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_130.tif": {
     "class": "n07873807",
     "description": "river",
     "index": 2
   },
-  "River_1442.JPEG": {
+  "val_131.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_132.tif": {
     "class": "n07873807",
     "description": "river",
     "index": 2
   },
-  "River_1553.JPEG": {
+  "val_133.tif": {
     "class": "n07873807",
     "description": "river",
     "index": 2
   },
-  "River_1898.JPEG": {
+  "val_134.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_135.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_136.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_137.tif": {
     "class": "n07873807",
     "description": "river",
     "index": 2
   },
-  "River_217.JPEG": {
+  "val_138.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_139.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_14.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_140.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_141.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_142.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_143.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_144.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_145.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_146.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_147.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_148.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_149.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_15.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_150.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_151.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_152.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_153.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_154.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_155.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_156.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_157.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_158.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_159.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_16.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_160.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_161.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_162.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_163.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_164.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_165.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_166.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_167.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_168.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_169.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_17.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_170.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_171.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_172.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_173.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_174.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_175.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_176.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_177.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_178.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_179.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_18.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_180.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_181.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_182.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_183.tif": {
     "class": "n07873807",
     "description": "river",
     "index": 2
   },
-  "River_2224.JPEG": {
+  "val_184.tif": {
     "class": "n07873807",
     "description": "river",
     "index": 2
   },
-  "River_231.JPEG": {
+  "val_185.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_186.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_187.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_188.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_189.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_19.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_190.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_191.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_192.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_193.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_194.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_195.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_196.tif": {
     "class": "n07873807",
     "description": "river",
     "index": 2
   },
-  "River_481.JPEG": {
+  "val_197.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_198.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_199.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_2.tif": {
     "class": "n07873807",
     "description": "river",
     "index": 2
   },
-  "River_523.JPEG": {
+  "val_20.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_200.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_201.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_202.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_203.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_204.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_205.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_206.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_207.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_208.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_209.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_21.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_210.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_211.tif": {
     "class": "n07873807",
     "description": "river",
     "index": 2
   },
-  "River_612.JPEG": {
+  "val_212.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_213.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_214.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_215.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_216.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_217.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_218.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_219.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_22.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_220.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_221.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_222.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_223.tif": {
     "class": "n07873807",
     "description": "river",
     "index": 2
   },
-  "River_68.JPEG": {
+  "val_224.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_225.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_226.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_227.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_228.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_229.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_23.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_230.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_231.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_232.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_233.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_234.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_235.tif": {
     "class": "n07873807",
     "description": "river",
     "index": 2
+  },
+  "val_236.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_237.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_238.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_239.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_24.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_240.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_241.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_242.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_243.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_244.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_245.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_246.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_247.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_248.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_249.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_25.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_250.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_251.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_252.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_253.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_254.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_255.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_256.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_257.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_258.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_259.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_26.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_260.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_261.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_262.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_263.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_264.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_265.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_266.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_267.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_268.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_269.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_27.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_270.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_271.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_272.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_273.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_274.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_275.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_276.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_277.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_278.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_279.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_28.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_280.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_281.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_282.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_283.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_284.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_285.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_286.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_287.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_288.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_289.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_29.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_290.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_291.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_292.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_293.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_294.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_295.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_296.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_297.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_298.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_299.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_3.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_30.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_300.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_301.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_302.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_303.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_304.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_305.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_306.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_307.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_308.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_309.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_31.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_310.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_311.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_312.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_313.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_314.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_315.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_316.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_317.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_318.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_319.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_32.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_320.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_321.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_322.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_323.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_324.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_325.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_326.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_327.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_328.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_329.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_33.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_330.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_331.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_332.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_333.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_334.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_335.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_336.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_337.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_338.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_339.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_34.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_340.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_341.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_342.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_343.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_344.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_345.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_346.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_347.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_348.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_349.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_35.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_350.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_351.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_352.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_353.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_354.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_355.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_356.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_357.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_358.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_359.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_36.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_360.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_361.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_362.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_363.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_364.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_365.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_366.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_367.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_368.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_369.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_37.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_370.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_371.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_372.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_373.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_374.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_375.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_376.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_377.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_378.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_379.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_38.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_380.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_381.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_382.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_383.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_384.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_385.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_386.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_387.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_388.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_389.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_39.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_390.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_391.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_392.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_393.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_394.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_395.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_396.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_397.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_398.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_399.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_4.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_40.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_400.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_401.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_402.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_403.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_404.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_405.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_406.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_407.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_408.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_409.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_41.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_410.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_411.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_412.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_413.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_414.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_415.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_416.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_417.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_418.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_419.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_42.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_420.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_421.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_422.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_423.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_424.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_425.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_426.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_427.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_428.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_429.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_43.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_430.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_431.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_432.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_433.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_434.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_435.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_436.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_437.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_438.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_439.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_44.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_440.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_441.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_442.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_443.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_444.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_445.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_446.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_447.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_448.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_449.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_45.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_450.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_451.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_452.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_453.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_454.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_455.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_456.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_457.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_458.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_459.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_46.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_460.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_461.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_462.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_463.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_464.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_465.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_466.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_467.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_468.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_469.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_47.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_470.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_471.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_472.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_473.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_474.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_475.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_476.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_477.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_478.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_479.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_48.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_480.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_481.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_482.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_483.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_484.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_485.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_486.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_487.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_488.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_489.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_49.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_490.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_491.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_492.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_493.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_494.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_495.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_496.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_497.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_498.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_499.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_5.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_50.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_51.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_52.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_53.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_54.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_55.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_56.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_57.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_58.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_59.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_6.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_60.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_61.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_62.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_63.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_64.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_65.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_66.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_67.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_68.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_69.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_7.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_70.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_71.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_72.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_73.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_74.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_75.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_76.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_77.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_78.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_79.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_8.tif": {
+    "class": "n02509815",
+    "description": "herbaceous vegetation",
+    "index": 7
+  },
+  "val_80.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_81.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_82.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_83.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_84.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_85.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_86.tif": {
+    "class": "n03662601",
+    "description": "highway",
+    "index": 0
+  },
+  "val_87.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_88.tif": {
+    "class": "n07747607",
+    "description": "residential",
+    "index": 8
+  },
+  "val_89.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_9.tif": {
+    "class": "n04285008",
+    "description": "pasture",
+    "index": 9
+  },
+  "val_90.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_91.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_92.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_93.tif": {
+    "class": "n07720875",
+    "description": "permanent crop",
+    "index": 3
+  },
+  "val_94.tif": {
+    "class": "n07920052",
+    "description": "sea, lake, sea or lake",
+    "index": 6
+  },
+  "val_95.tif": {
+    "class": "n04146614",
+    "description": "industrial",
+    "index": 4
+  },
+  "val_96.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
+  },
+  "val_97.tif": {
+    "class": "n07873807",
+    "description": "river",
+    "index": 2
+  },
+  "val_98.tif": {
+    "class": "n01882714",
+    "description": "annual crop",
+    "index": 5
+  },
+  "val_99.tif": {
+    "class": "n02165456",
+    "description": "forest",
+    "index": 1
   }
 }

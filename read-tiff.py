@@ -7,6 +7,7 @@ WIDTH = 64
 HEIGHT = 64
 test_image = './ms-data/class_10_val/map_images/Industrial_473.tif'
 
+
 # attempt with tensorflow.io
 # img loaded has all pixels equal to 4
 # LIMITATION: RGB + A, no other channels
@@ -25,6 +26,69 @@ test_image = './ms-data/class_10_val/map_images/Industrial_473.tif'
 # attempt with tifffile -- IN PROGRESS
 # it imports all channels, but it display nothing!
 import tifffile
+
+
+training_images = './ms-data/class_10_train/*/images/*.tif'
+
+import glob
+from os.path import basename
+import re
+from json import load, dump
+from skimage import exposure, img_as_ubyte
+def normalize(image):
+        image = (image - image.min()) / (image.max() - image.min())
+        return image
+
+files = glob.glob(training_images)
+print(files)
+NUM_CLASS = 10
+tiny_class_dict = load(open('./ms-data/class_dict_10.json', 'r'))
+
+for path in files:
+# path = './ms-data/class_10_train/n01882714/images/AnnualCrop_1.tif'
+    print(path)
+
+    # Read image and convert the image to [0, 1] range 3d tensor
+    img = tifffile.imread(path)
+    print(img.shape)
+    print(img.dtype)
+    img = img[:, :, [3, 2, 1]] # change order to have RGB
+    
+    # linear normalization
+    # img = normalize(img) # -> 48%
+
+
+    img = img/10000*3.5
+    # Contrast stretching
+#     p2, p98 = np.percentile(img, (70, 30))
+#     img_rescale = exposure.rescale_intensity(img, in_range=(p2, p98))
+
+    # img =  exposure.equalize_hist(img) -> 30%
+    # img = img.astype('uint8')
+    print(img.dtype)
+
+    fig = plt.figure()
+
+    # fig.add_subplot(1,3,3)
+    plt.imshow(img)
+    plt.show()
+
+    img = tf.image.convert_image_dtype(img, tf.float32)
+    img = tf.image.resize(img, [WIDTH, HEIGHT])
+
+    exit()
+
+
+
+
+
+
+
+
+
+
+
+
 img = tifffile.imread(test_image) # use the key=0
 print(img.shape)
 print(img.dtype)
@@ -81,46 +145,3 @@ pred_label = class_names[np.argmax(np.round(img_predictions,2))]
 print(" Predicted label is :: "+ pred_label)
 
 
-training_images = './ms-data/class_10_train/*/images/*.tif'
-
-import glob
-from os.path import basename
-import re
-from json import load, dump
-from skimage import exposure, img_as_ubyte
-def normalize(image):
-        image = (image - image.min()) / (image.max() - image.min())
-        return image
-
-files = glob.glob(training_images)
-print(files)
-NUM_CLASS = 10
-tiny_class_dict = load(open('./ms-data/class_dict_10.json', 'r'))
-
-for path in files:
-# path = './ms-data/class_10_train/n01882714/images/AnnualCrop_1.tif'
-    print(path)
-
-    # Read image and convert the image to [0, 1] range 3d tensor
-    img = tifffile.imread(path)
-    print(img.shape)
-    print(img.dtype)
-    img = img[:, :, [3, 2, 1]] # change order to have RGB
-    
-    # linear normalization
-    img = (img - np.mean(img)) / np.std(img)
-
-    # img =  exposure.equalize_hist(img)
-    # img = img.astype('uint8')
-    print(img.dtype)
-
-    fig = plt.figure()
-
-    # fig.add_subplot(1,3,3)
-    plt.imshow(img)
-    plt.show()
-
-    img = tf.image.convert_image_dtype(img, tf.float32)
-    img = tf.image.resize(img, [WIDTH, HEIGHT])
-
-    exit()

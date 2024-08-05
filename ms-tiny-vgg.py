@@ -70,6 +70,21 @@ def split_val_data():
             copyfile(val_images[i], val_images[i].replace('images',
                                                           'test_images'))
 
+
+def normalize(image):
+        image = (image - image.min()) / (image.max() - image.min())
+        return image
+
+def read_image(path):
+    img = tifffile.imread(path.decode('ascii'))
+    img = img[:, :, [11, 4, 3, 2, 1]] # change order to have RGB
+    # img = normalize(img)
+    img = img/10000*3.5
+
+    img = tf.image.convert_image_dtype(img, tf.float32)
+    img = tf.image.resize(img, [WIDTH, HEIGHT])
+    return img
+
 def process_path_train(path):
     """
     Get the (class label, processed image) pair of the given image path. This
@@ -95,11 +110,7 @@ def process_path_train(path):
     label = tf.reshape(label, [NUM_CLASS])
 
     # Read image and convert the image to [0, 1] range 3d tensor
-    img = tifffile.imread(path.decode('ascii'))
-    img = img[:, :, [3, 2, 1]] # change order to have RGB
-    img = exposure.equalize_hist(img)
-    img = tf.image.convert_image_dtype(img, tf.float32)
-    img = tf.image.resize(img, [WIDTH, HEIGHT])
+    img = read_image(path)
     return(img, label)
 
 def process_path_test(path):
@@ -128,12 +139,7 @@ def process_path_test(path):
     label = tf.reshape(label, [NUM_CLASS])
 
     # Read image and convert the image to [0, 1] range 3d tensor
-    img = tifffile.imread(path.decode('ascii'))
-    img = img[:, :, [3, 2, 1]] # change order to have RGB
-    img = exposure.equalize_hist(img)
-    img = tf.image.convert_image_dtype(img, tf.float32)
-    img = tf.image.resize(img, [WIDTH, HEIGHT])
-
+    img = read_image(path)
     return(img, label)
 
 
@@ -255,7 +261,7 @@ WIDTH = 64
 HEIGHT = 64
 EPOCHS = 1000
 PATIENCE = 50
-LR = 0.001
+LR = 0.0001
 NUM_CLASS = 10
 BATCH_SIZE = 32
 
@@ -313,7 +319,7 @@ test_dataset = prepare_for_training(test_labeld_dataset,
 # Use Keras Sequential API instead, since it is easy to save the model
 filters = 10
 tiny_vgg = Sequential([
-    Conv2D(filters, (3, 3), input_shape=(64, 64, 3), name='conv_1_1'),
+    Conv2D(filters, (3, 3), input_shape=(64, 64, 5), name='conv_1_1'),
     Activation('relu', name='relu_1_1'),
     Conv2D(filters, (3, 3), name='conv_1_2'),
     Activation('relu', name='relu_1_2'),
@@ -332,8 +338,8 @@ tiny_vgg = Sequential([
 print("COMMMPIIIIIILEEE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 # "Compile" the model with loss function and optimizer
 loss_object = tf.keras.losses.CategoricalCrossentropy()
-# optimizer = tf.keras.optimizers.Adam(learning_rate=LR)
-optimizer = tf.keras.optimizers.SGD(learning_rate=LR)
+optimizer = tf.keras.optimizers.Adam(learning_rate=LR)
+# optimizer = tf.keras.optimizers.SGD(learning_rate=LR)
 print("COMMMPIIIIIILEEEDDDDDDDDDDDDDD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 
 train_mean_loss = tf.keras.metrics.Mean(name='train_mean_loss')

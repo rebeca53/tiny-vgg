@@ -34,15 +34,32 @@ import glob
 files = glob.glob(test_images)
 print(files)
 
+def read_image(path):
+    img = tifffile.imread(path)
+    img = img[:, :, [3, 2, 1]] # change order to have RGB
+    # img = normalize(img)
+    img = img/10000*3.5
+
+    img = tf.image.convert_image_dtype(img, tf.float32)
+    img = tf.image.resize(img, [WIDTH, HEIGHT])
+    return img
+
+def read_image_five_band(path):
+    img = tifffile.imread(path)
+    img = img[:, :, [11, 4, 3, 2, 1]] # change order to have RGB
+    # img = normalize(img)
+    img = img/10000*3.5
+
+    img = tf.image.convert_image_dtype(img, tf.float32)
+    img = tf.image.resize(img, [WIDTH, HEIGHT])
+    return img
+
 for test_image in files:
     print(test_image)
     # test_image = './data/class_10_val/map_images/Forest_1465.JPEG'
 
     # Read image and convert the image to [0, 1] range 3d tensor
-    img = tifffile.imread(test_image)
-    img = img[:, :, [3, 2, 1]] # change order to have RGB
-    img = tf.image.convert_image_dtype(img, tf.float32)
-    img = tf.image.resize(img, [WIDTH, HEIGHT])
+    img = read_image_five_band(test_image)
 
     img = tf.expand_dims(img, 0)  # Create batch axis
 
