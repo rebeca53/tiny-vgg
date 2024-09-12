@@ -32,8 +32,6 @@ def renameTrainImages(className):
 
     os.chdir(prev)
 
-renameAllTrain()
-
 
 # # Preparing validation and test images
 # def copy_files():
@@ -156,7 +154,6 @@ def renameAllVal():
    renameValImages('val_images', 250, val_dict)
    write_val_dict(val_dict)
 
-#renameAllVal()
 
 def renameMapImages():
     map_dict = {}
@@ -185,4 +182,7 @@ def renameMapImages():
 
     write_val_dict(map_dict)
 
+
+renameAllTrain()
 # renameMapImages()
+#renameAllVal()
