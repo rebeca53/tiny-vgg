@@ -230,38 +230,38 @@ def collectEuroSat():
         print("number of test files: "+str(len(test_files)))
 
         # copy first set to the corresponding ms-data\class_10_train\+ classLabel + \images\
+        dst = PATH_DATA + "/class_10_train/"+entryDict[className]+"/images/"
+        shutil.rmtree(dst, ignore_errors=True)
+        os.makedirs(os.path.dirname(dst), exist_ok=True)
         for file in training_files:
-            dst = PATH_DATA + "/class_10_train/"+entryDict[className]+"/images/"
             print("training path: "+dst)
             print("src: "+file)
-            shutil.rmtree(dst, ignore_errors=True)
-            os.makedirs(os.path.dirname(dst), exist_ok=True)
 
             shutil.copy(file, dst) 
-
+            
         # copy second set to the corresponding ms-data\class_10_val\test_images\
+        dst = PATH_DATA + "/class_10_val/val_images/"
+        shutil.rmtree(dst, ignore_errors=True)
+        os.makedirs(os.path.dirname(dst), exist_ok=True)
         for file in val_files:
-            dst = PATH_DATA + "/class_10_val/val_images/"
             print("validation path: "+dst)
             print("src: "+file)
-            shutil.rmtree(dst, ignore_errors=True)
-            os.makedirs(os.path.dirname(dst), exist_ok=True)
 
             shutil.copy(file, dst)
 
         # copy third set to the corresponding ms-data\class_10_val\test_images\
+        dst = PATH_DATA + "/class_10_val/test_images/"
+        shutil.rmtree(dst, ignore_errors=True)
+        os.makedirs(os.path.dirname(dst), exist_ok=True)
         for file in test_files:
-            dst = PATH_DATA + "/class_10_val/test_images"
             print("test path: "+dst)
             print("src: "+file)
-            shutil.rmtree(dst, ignore_errors=True)
-            os.makedirs(os.path.dirname(dst), exist_ok=True)
 
             shutil.copy(file, dst)
 
 
 # renameAllTrain()
 # renameMapImages()
-# renameAllVal()
+renameAllVal()
 
-collectEuroSat()
+# collectEuroSat()
