@@ -42,8 +42,13 @@ files = glob.glob(training_images)
 print(files)
 NUM_CLASS = 10
 tiny_class_dict = load(open('./ms-data/class_dict_10.json', 'r'))
+max_number = 10
+i = 0
 
 for path in files:
+    if i == max_number:
+        exit()
+        
 # path = './ms-data/class_10_train/n01882714/images/AnnualCrop_1.tif'
     print(path)
 
@@ -75,7 +80,8 @@ for path in files:
     img = tf.image.convert_image_dtype(img, tf.float32)
     img = tf.image.resize(img, [WIDTH, HEIGHT])
 
-    exit()
+    i = i + 1
+exit()
 
 
 

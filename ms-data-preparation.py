@@ -2,17 +2,6 @@ from pathlib import Path
 import os
 import random
 import json
-import shutil
-
-# n01882714, n02165456, n02509815, n03662601, n04146614, n04285008, n07720875, n07747607, n07873807, n07920052
-# path = Path.cwd() / 'ms-data' / 'class_10_train' / 'n07920052' / 'images'  # The path to use
-# to_usenum = 0  # Start num
-# allimg = list(path.glob('*.jpg'))  # Getting all the img files
-# chdir(path)  # Changing the cwd to the path
-
-# for i, imgfile in enumerate(allimg):
-#     to_usename = f"n07920052_{to_usenum+i}.JPEG"  # The name to use
-#     imgfile.rename(to_usename) 
 
 def renameAllTrain():
     classCodes = ['n01882714', 'n02165456', 'n02509815', 'n03662601', 'n04146614', 'n04285008', 'n07720875', 'n07747607', 'n07873807', 'n07920052'];
@@ -182,7 +171,97 @@ def renameMapImages():
 
     write_val_dict(map_dict)
 
+PATH_EUROSAT = "C:/Users/rebec/Documents/second semester/data to knowledge/individual project/EuroSAT_MS/EuroSAT_MS"
+PATH_DATA = "C:/Users/rebec/Documents/second semester/data to knowledge/individual project/code/tiny-vgg/ms-data"
+# PATH_TRAIN_DATA = "ms-data\class_10_train\" + classLabel + "images"
+SAMPLES_PER_CLASS = 200
+TRAIN_VAL_TEST_SPLIT = [0.5, 0.25, 0.25]
 
-renameAllTrain()
+import numpy as np
+import os
+import shutil
+import glob
+
+
+def collectEuroSat():
+    eurosatClasses = ["AnnualCrop", "Forest", "HerbaceousVegetation", "Highway", "Industrial", "Pasture", "PermanentCrop", "Residential", "River", "SeaLake"]
+    entryDict = {"AnnualCrop" : "n01882714",
+                 "Forest": "n02165456",
+                 "HerbaceousVegetation": "n02509815", 
+                 "Highway": "n03662601",
+                 "Industrial": "n04146614",
+                 "Pasture": "n04285008",
+                 "PermanentCrop": "n07720875",
+                 "Residential": "n07747607",
+                 "River": "n07873807",
+                 "SeaLake": "n07920052"}
+
+    for className in eurosatClasses:
+        path = PATH_EUROSAT + "/" + className
+        print("path: "+path)
+        # list all files in dir
+        files = glob.glob(path+'/*.tif')
+        print("files are: ")
+        print(files)
+
+        # select SAMPLES_PER_CLASS of the files randomly 
+        random_files = np.random.choice(files, SAMPLES_PER_CLASS, replace=False)
+        print("random files are: ")
+        print(random_files)
+
+        # split resulting list into three parts
+        training_upper_bound = int(SAMPLES_PER_CLASS*TRAIN_VAL_TEST_SPLIT[0])
+        print("training upper bound: "+str(training_upper_bound))
+        training_files = random_files[:training_upper_bound]
+        print("number of training samples: "+str(len(training_files)))
+
+        val_lower_bound = training_upper_bound
+        print("validation lower bound: "+str(val_lower_bound))
+        val_upper_bound = int(val_lower_bound + SAMPLES_PER_CLASS*TRAIN_VAL_TEST_SPLIT[1])
+        print("validation upper bound: "+str(val_upper_bound))
+        val_files = random_files[val_lower_bound:val_upper_bound]
+        print("number of validation samples: "+str(len(val_files)))
+
+        test_lower_bound = val_upper_bound
+        print("test lower bound: "+str(test_lower_bound))
+        test_upper_bound = int(test_lower_bound + SAMPLES_PER_CLASS*TRAIN_VAL_TEST_SPLIT[2])
+        print("test upper bound: "+str(test_upper_bound))
+        test_files = random_files[test_lower_bound:test_upper_bound]
+        print("number of test files: "+str(len(test_files)))
+
+        # copy first set to the corresponding ms-data\class_10_train\+ classLabel + \images\
+        for file in training_files:
+            dst = PATH_DATA + "/class_10_train/"+entryDict[className]+"/images/"
+            print("training path: "+dst)
+            print("src: "+file)
+            shutil.rmtree(dst, ignore_errors=True)
+            os.makedirs(os.path.dirname(dst), exist_ok=True)
+
+            shutil.copy(file, dst) 
+
+        # copy second set to the corresponding ms-data\class_10_val\test_images\
+        for file in val_files:
+            dst = PATH_DATA + "/class_10_val/val_images/"
+            print("validation path: "+dst)
+            print("src: "+file)
+            shutil.rmtree(dst, ignore_errors=True)
+            os.makedirs(os.path.dirname(dst), exist_ok=True)
+
+            shutil.copy(file, dst)
+
+        # copy third set to the corresponding ms-data\class_10_val\test_images\
+        for file in test_files:
+            dst = PATH_DATA + "/class_10_val/test_images"
+            print("test path: "+dst)
+            print("src: "+file)
+            shutil.rmtree(dst, ignore_errors=True)
+            os.makedirs(os.path.dirname(dst), exist_ok=True)
+
+            shutil.copy(file, dst)
+
+
+# renameAllTrain()
 # renameMapImages()
-#renameAllVal()
+# renameAllVal()
+
+collectEuroSat()
