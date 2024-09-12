@@ -7,7 +7,6 @@ WIDTH = 64
 HEIGHT = 64
 test_image = './ms-data/class_10_val/map_images/Industrial_473.tif'
 
-
 # attempt with tensorflow.io
 # img loaded has all pixels equal to 4
 # LIMITATION: RGB + A, no other channels
