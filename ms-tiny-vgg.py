@@ -263,7 +263,7 @@ EPOCHS = 1000
 PATIENCE = 50
 LR = 0.0001
 NUM_CLASS = 10
-BATCH_SIZE = 32
+BATCH_SIZE = 64
 
 # Create training and validation dataset
 tiny_class_dict = load(open('./ms-data/class_dict_10.json', 'r'))
