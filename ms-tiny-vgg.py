@@ -77,9 +77,14 @@ def normalize(image):
 
 def read_image(path):
     img = tifffile.imread(path.decode('ascii'))
-    img = img[:, :, [11, 4, 3, 2, 1]] # change order to have RGB
+    img = img[:, :, [3, 2, 1]] # change order to have RGB
     # img = normalize(img)
     img = img/10000*3.5
+
+    # print(path)
+    # print(img.dtype)
+    # plt.imshow(img)
+    # plt.show()
 
     img = tf.image.convert_image_dtype(img, tf.float32)
     img = tf.image.resize(img, [WIDTH, HEIGHT])
@@ -263,7 +268,7 @@ EPOCHS = 1000
 PATIENCE = 50
 LR = 0.0001
 NUM_CLASS = 10
-BATCH_SIZE = 64
+BATCH_SIZE = 32
 
 # Create training and validation dataset
 tiny_class_dict = load(open('./ms-data/class_dict_10.json', 'r'))
@@ -319,7 +324,7 @@ test_dataset = prepare_for_training(test_labeld_dataset,
 # Use Keras Sequential API instead, since it is easy to save the model
 filters = 10
 tiny_vgg = Sequential([
-    Conv2D(filters, (3, 3), input_shape=(64, 64, 5), name='conv_1_1'),
+    Conv2D(filters, (3, 3), input_shape=(64, 64, 3), name='conv_1_1'),
     Activation('relu', name='relu_1_1'),
     Conv2D(filters, (3, 3), name='conv_1_2'),
     Activation('relu', name='relu_1_2'),
