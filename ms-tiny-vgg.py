@@ -359,6 +359,8 @@ best_vali_loss = np.inf
 start_time = time()
 print('Start training.\n')
 
+myhistory = [[0]*5 for i in range(EPOCHS)]
+
 for epoch in range(EPOCHS):
     # Train
     for image_batch, label_batch in train_dataset:
@@ -375,6 +377,11 @@ for epoch in range(EPOCHS):
                           train_accuracy.result() * 100,
                           vali_mean_loss.result(),
                           vali_accuracy.result() * 100))
+    myhistory[epoch][0] = epoch + 1
+    myhistory[epoch][1] = '{:.4f}'.format(train_mean_loss.result()).replace('.',',')
+    myhistory[epoch][2] = '{:.4f}'.format(train_accuracy.result() * 100).replace('.',',')
+    myhistory[epoch][3] = '{:.4f}'.format(vali_mean_loss.result()).replace('.',',')
+    myhistory[epoch][4] = '{:.4f}'.format(vali_accuracy.result() * 100).replace('.',',')
 
     # Early stopping
     if vali_mean_loss.result() < best_vali_loss:
@@ -412,3 +419,24 @@ template = '\ntest loss: {:.4f}, test accuracy: {:.4f}'
 print(template.format(test_mean_loss.result(),
                       test_accuracy.result() * 100))
 
+
+import csv
+import pandas as pd
+fields = ['epoch', 'train loss', 'train acc', 'val loss', 'val acc']
+
+with open('myhistory.csv', 'w', newline='') as f:
+    csv_writer = csv.writer(f, delimiter=';')
+    csv_writer.writerow(fields)
+    csv_writer.writerows(myhistory)
+
+# form dataframe from data
+df = pd.DataFrame(myhistory, columns=fields)
+df = df.replace(regex={',': '.'}).astype(float)
+print(df)
+
+# plot multiple columns such as population and year from dataframe
+df.plot(x="epoch", y=["train acc", "val acc"],
+        kind="line", figsize=(10, 10))
+ 
+# display plot
+plt.show()
