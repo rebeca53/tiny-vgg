@@ -96,7 +96,7 @@ def normalize_by_percentile(img, lower_percentile=1, upper_percentile=99):
 
 def read_image(path):
     img = tifffile.imread(path.decode('ascii'))
-    img = img[:, :, [11,4,3,2,1]] # change order to have RGB
+    # img = img[:, :, [11,4,3,2,1]] # change order to have RGB
     # img = normalize(img)
     # img = img/10000*3.5
     img = scale_band(img)
@@ -346,7 +346,7 @@ test_dataset = prepare_for_training(test_labeld_dataset,
 # Use Keras Sequential API instead, since it is easy to save the model
 filters = 10
 tiny_vgg = Sequential([
-    Conv2D(filters, (3, 3), input_shape=(64, 64, 5), name='conv_1_1'),
+    Conv2D(filters, (3, 3), input_shape=(64, 64, 13), name='conv_1_1'),
     Activation('relu', name='relu_1_1'),
     Conv2D(filters, (3, 3), name='conv_1_2'),
     Activation('relu', name='relu_1_2'),
