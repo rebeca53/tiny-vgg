@@ -404,6 +404,8 @@ for epoch in range(EPOCHS):
 
 print('\nFinished training, used {:.4f} mins.'.format((time() -
                                                        start_time) / 60))
+myhistory = myhistory[:epoch]
+
 # Save trained model
 tiny_vgg.save('trained_tiny_vgg.h5')
 tiny_vgg = tf.keras.models.load_model('trained_vgg_best.h5')
