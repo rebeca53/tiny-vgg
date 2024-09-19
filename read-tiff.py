@@ -53,6 +53,18 @@ def scale_band(band,  input_min = 0, input_max = 2750, output_min = 1, output_ma
                           output_min, output_max)
     return scaled_band.astype(np.uint8)
 
+def normalize_by_percentile(img, lower_percentile=1, upper_percentile=99):
+    # Calcula os percentis 1 e 99
+    lower_bound = np.percentile(img, lower_percentile)
+    upper_bound = np.percentile(img, upper_percentile)
+    
+    # Aplica o corte nos valores abaixo do percentil 1 e acima do percentil 99
+    img_clipped = np.clip(img, lower_bound, upper_bound)
+    
+    # Normaliza os valores entre 0 e 1
+    normalized_img = (img_clipped - lower_bound) / (upper_bound - lower_bound)
+    
+    return normalized_img
 
 files = glob.glob(training_images)
 print(files)
@@ -72,18 +84,20 @@ for path in files:
     img = tifffile.imread(path)
     print(img.shape)
     print(img.dtype)
-    img = img[:, :, [3, 2, 1]] # change order to have RGB
+    img = img[:, :, [11, 4, 3, 2, 1]] # change order to have RGB
     
     # linear normalization
     # img = normalize(img) # -> 48%
 
 
-    img = img/10000*3.5
+    # img = img/10000
 
     # img = scale_band(img, input_min, input_max, output_min, output_max)
 
-    # img = scale_band(img)
+    img = scale_band(img)
     
+    # img = normalize_by_percentile(img)
+
     # Contrast stretching
 #     p2, p98 = np.percentile(img, (70, 30))
 #     img_rescale = exposure.rescale_intensity(img, in_range=(p2, p98))
