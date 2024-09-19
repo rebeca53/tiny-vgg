@@ -38,6 +38,22 @@ def normalize(image):
         image = (image - image.min()) / (image.max() - image.min())
         return image
 
+
+
+
+# Define the input and output ranges for scaling
+input_min = 0
+input_max = 2750
+output_min = 1
+output_max = 255
+
+# Apply scaling to each band
+def scale_band(band,  input_min = 0, input_max = 2750, output_min = 1, output_max = 255):
+    scaled_band = np.clip(((band - input_min) / (input_max - input_min)) * (output_max - output_min) + output_min,
+                          output_min, output_max)
+    return scaled_band.astype(np.uint8)
+
+
 files = glob.glob(training_images)
 print(files)
 NUM_CLASS = 10
@@ -63,6 +79,11 @@ for path in files:
 
 
     img = img/10000*3.5
+
+    # img = scale_band(img, input_min, input_max, output_min, output_max)
+
+    # img = scale_band(img)
+    
     # Contrast stretching
 #     p2, p98 = np.percentile(img, (70, 30))
 #     img_rescale = exposure.rescale_intensity(img, in_range=(p2, p98))

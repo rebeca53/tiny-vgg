@@ -75,11 +75,19 @@ def normalize(image):
         image = (image - image.min()) / (image.max() - image.min())
         return image
 
+# Apply scaling to each band
+def scale_band(band,  input_min = 0, input_max = 2750, output_min = 1, output_max = 255):
+    scaled_band = np.clip(((band - input_min) / (input_max - input_min)) * (output_max - output_min) + output_min,
+                          output_min, output_max)
+    return scaled_band.astype(np.uint8)
+
 def read_image(path):
     img = tifffile.imread(path.decode('ascii'))
     img = img[:, :, [11, 4, 3, 2, 1]] # change order to have RGB
     # img = normalize(img)
-    img = img/10000*3.5
+    # img = img/10000*3.5
+    # img = scale_band(img)
+
 
     # print(path)
     # print(img.dtype)
